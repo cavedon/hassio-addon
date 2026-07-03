@@ -1,15 +1,11 @@
 ---
 name: evcc
-version: 0.312.1
+version: 0.312.1.1
 slug: evcc
 description: EV Charge Controller!
 url: https://github.com/evcc-io/evcc
 arch: 
-  - armhf
-  - armv7
-  - aarch64
   - amd64
-  - i386
 startup: application
 panel_icon: mdi:ev-station
 panel_admin: false
@@ -20,7 +16,7 @@ ingress: true
 ingress_port: 7070
 init: false
 watchdog: http://[HOST]:[PORT:7070]
-image: evcc/evcc
+image: ghcr.io/cavedon/evcc
 options: 
   sqlite_file: /data/evcc.db
   config_file: /config/evcc.yaml
